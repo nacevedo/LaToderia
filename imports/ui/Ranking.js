@@ -26,8 +26,6 @@ class Ranking extends Component {
 	this.update(this.props); 
 	}
 
-	
-
 	update (props){
 	console.log("Update", props); 
 	console.log("State", this.svg); 
@@ -35,18 +33,22 @@ class Ranking extends Component {
 
 		const data = [
 			{
-			name : "pepito",
-			cal : 2 
+			"name" : "pepito",
+			"cal" : 2 
 			}, 
 			{
-			name : "juanito",
-			cal : 3
+			"name" : "juanito",
+			"cal" : 3
 			}, 
 			{
-			name : "doricita",
-			cal : 3
+			"name" : "doricita",
+			"cal" : 3
 			}
 	];  
+
+
+d3.json(data, function(error, classes) {
+    if (error) throw error;
 
 		  var root = d3.hierarchy({children: classes})
 		      .sum(function(d) { return d.value; }) 
@@ -87,21 +89,20 @@ class Ranking extends Component {
 		  node.append("title")
 		      .text(function(d) { return d.id + "\n" + format(d.value); });
 
-
-	
+	});
   }
 
   render() {
-  	return (
-    <div> 
-    <svg width="960" 
-    	height="960" 
-    	ref = {(svg) => this.svg = svg}>
-    </svg>
+	  	return (
+	    <div> 
+	    <svg width="960" 
+	    	height="960" 
+	    	ref = {(svg) => this.svg = svg}>
+	    </svg>
 
-    </div> 
-   ); 
-  }
+	    </div> 
+	   ); 
+  	}
 }
 
 Ranking.propTypes = {
