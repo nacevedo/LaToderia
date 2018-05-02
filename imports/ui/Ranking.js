@@ -9,7 +9,10 @@ class Ranking extends Component {
 
   }
 
+  
+
   componentDidMount(){
+
   	const svg = d3.select(this.svg);
     this.width = +svg.attr("width");
     this.height = +svg.attr("height");
@@ -24,12 +27,20 @@ class Ranking extends Component {
 
 
 	this.update(this.props); 
+
+	}
+
+	componentWillUpdate(newProps){
+		
+		this.update(newProps);
 	}
 
 	update (props){
-	console.log("Update", props); 
+
+
+	console.log("Update", props.posts); 
 	console.log("State", this.svg); 
-		//if (!props.posts || props.post.length === 0) return ; 
+	if (!props.posts || props.posts.length === 0) return ; 
 
 		const data = [
 			{
@@ -47,7 +58,7 @@ class Ranking extends Component {
 	];  
 
 
-d3.json(data, function(error, classes) {
+d3.json(props.post, function(error, classes) {
     if (error) throw error;
 
 		  var root = d3.hierarchy({children: classes})
@@ -106,7 +117,7 @@ d3.json(data, function(error, classes) {
 }
 
 Ranking.propTypes = {
-  
+  posts: PropTypes.array.isRequired
 };
 
 export default(Ranking);

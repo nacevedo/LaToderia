@@ -14,6 +14,7 @@ import PostAlone from "./PostAlone";
 import ChatList from "./ChatList";
 import ChatAlone from "./ChatAlone";
 import Ranking from "./Ranking";
+import PostAdd from "./PostAdd";
 
 
 
@@ -85,11 +86,33 @@ export class App extends Component {
 
   }
 
+  onAdd(name, text) {
+
+    // User exists ?? 
+    /**
+  if (typeof text !== 'string' || typeof title !== 'string' )
+    {
+      window.alert ("Write only text please!"); 
+      return; 
+    }
+
+    if (Meteor.userId() === null) 
+    {
+      window.alert ("You are not registered! Please sign in."); 
+      return; 
+    }
+    **/
+
+    Meteor.call('posts.insert', name, text, (err, res) => {if (err) alert(err.error)}); 
+
+  }
+
   render() {
     return(
       <div> 
         <div> EL app </div> 
-        <Ranking/>
+        <Ranking posts = {this.props.posts} />
+        <PostAdd onAdd = {this.onAdd.bind(this)}/> 
       </div> 
       ); 
   

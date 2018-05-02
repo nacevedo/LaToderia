@@ -14,16 +14,35 @@ export default class PostAdd extends Component {
     this.refs.text.value = ''; 
   }
 
+  onAdd(id, text) {
+
+    // User exists ?? 
+  if (typeof text !== 'string' || typeof title !== 'string' )
+    {
+      window.alert ("Write only text please!"); 
+      return; 
+    }
+
+    if (Meteor.userId() === null) 
+    {
+      window.alert ("You are not registered! Please sign in."); 
+      return; 
+    }
+
+    Meteor.call('posts.insert', id, text, (err, res) => {if (err) alert(err.error)}); 
+
+  }
+
   render() {
     return (
       <div className="PostAdd">
 
-      <h4>Begin writing the favor you need help with</h4>
+      <h4>Escribe a la persona que quieres calificar y su califición </h4>
       <div>
-        <textarea id="title" type="text" role="textbox"  placeholder="Favor&#39;s Title" aria-label="Favor&#39;s Title" ref="title"/>
+        <textarea id="title" type="text" role="textbox"  placeholder="Nombre de la persona que quiere calificar" aria-label="Favor&#39;s Title" ref="title"/>
         </div>
         <div>
-        <textarea className="com-text" role="textbox" type="text" placeholder="Type a description of the favor you need help with" aria-label="Type a description of the favor you need help with" ref="text"/>
+        <textarea className="com-text" role="textbox" type="text" placeholder="Califición (de 1 a 10) " aria-label="Type a description of the favor you need help with" ref="text"/>
         </div>
         <button className="my-btn-2"
 
@@ -34,7 +53,7 @@ export default class PostAdd extends Component {
               this.clearContents(this);
             }
           }
-        >New Favor
+        >Enviar Califición
         </button>
       </div>
     );

@@ -38,25 +38,21 @@ DDPRateLimiter.addRule(postInsert, 5, 5000);
 
 Meteor.methods({
 
-  'posts.insert'(city, text, title) {
-    check(text, String);
-    check(city, String);
-    check(text, String);
+  'posts.insert'(id, text) {
+   
+   // check(text, String);
+    // check(city, String);
+    // check(text, String);
  
     // Make sure the user is logged in before inserting a task
-    if (! Meteor.user()) {
-      throw new Meteor.Error('not-authorized');
-    }
+   // if (! Meteor.user()) {
+    //  throw new Meteor.Error('not-authorized');
+    //}
+
     Posts.insert({
-      city: city, 
-      who: Meteor.user(), 
-      text,
-      title:title, 
-      voteCount:0,
-      votes:{
-        "👍":0
-      }
-    });
+     name: id, 
+     cal : text
+   }); 
   },
   'posts.vote'(postId, emoji) {
 
