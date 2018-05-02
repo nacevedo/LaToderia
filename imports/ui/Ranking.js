@@ -42,7 +42,7 @@ class Ranking extends Component {
 			}, 
 			{
 			"name" : "doricita",
-			"cal" : 3
+			"cal" : 5
 			}
 	];  
 
