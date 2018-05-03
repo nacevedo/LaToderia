@@ -91,7 +91,7 @@ class Ranking extends Component {
 	  	return (
 	    <div> 
 	    <svg width="960" 
-	    	height="960" 
+	    	height="400" 
 	    	ref = {(svg) => this.svg = svg}>
 	    </svg>
 

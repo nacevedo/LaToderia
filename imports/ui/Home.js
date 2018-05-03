@@ -3,34 +3,6 @@ import PropTypes from "prop-types";
 import Autosuggest from 'react-autosuggest';
 import {Route, NavLink, HashRouter} from "react-router-dom";
 
-import cities from './cities.json';
-
-
-function escapeRegexCharacters(str) {
-	return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function getSuggestions(value) {
-	const escapedValue = escapeRegexCharacters(value.trim());
-
-	if (escapedValue === '') {
-		return [];
-	}
-
-	const regex = new RegExp('^' + escapedValue, 'i');
-
-	return cities.filter(cities => regex.test(cities.name));
-}
-
-function getSuggestionValue(suggestion) {
-	return suggestion.name;
-}
-
-function renderSuggestion(suggestion) {
-	return (
-		<span>{suggestion.name}</span>
-		);
-}
 
 
 class Home extends Component {
