@@ -22,14 +22,14 @@ export default class PostAdd extends Component {
       
       
 
-      <h4>Escribe a la persona que quieres calificar y su califición </h4>
+      <h4>Escriba el nombre del técnico al que quiere calificar y su califición </h4>
       <div>
-        <textarea id="title" type="text" role="textbox"  placeholder="Nombre de la persona que quiere calificar" aria-label="Favor&#39;s Title" ref="title"/>
+        <textarea id="title" type="text" role="textbox"  placeholder="Nombre del técnico que quiere calificar" aria-label="Favor&#39;s Title" ref="title"/>
         </div>
         <div>
         <textarea className="com-text" role="textbox" type="text" placeholder="Califición (de 1 a 10) " aria-label="Type a description of the favor you need help with" ref="text"/>
         </div>
-        <button className="my-btn-2"
+        <button className="button"
 
           onClick={
             () => 
