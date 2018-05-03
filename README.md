@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/nacevedo/LaToderia/master/client/img/logo.png" title="Sakana" alt="Mandao Dao Logo" href="" height = 100px width = 50px>
+<img src="https://raw.githubusercontent.com/nacevedo/LaToderia/master/client/img/logo.png" title="Sakana" alt="Mandao Dao Logo" href="" height = 100px width = 70px>
 
 
 # La Todería
