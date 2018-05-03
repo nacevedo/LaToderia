@@ -103,6 +103,11 @@ export class App extends Component {
       return; 
     }
     **/
+    if(name == "" || text == "")
+    {
+      window.alert("No ha ingresado un campo"); 
+      return ;
+    }
 
     Meteor.call('posts.insert', name, text, (err, res) => {if (err) alert(err.error)}); 
 
