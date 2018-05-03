@@ -111,6 +111,7 @@ export class App extends Component {
     return(
       <div> 
         <div> EL app </div> 
+        <p> Hay {this.props.posts.length} individuos </p>
         <Ranking posts = {this.props.posts} />
         <PostAdd onAdd = {this.onAdd.bind(this)}/> 
       </div> 

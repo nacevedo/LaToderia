@@ -14,28 +14,13 @@ export default class PostAdd extends Component {
     this.refs.text.value = ''; 
   }
 
-  onAdd(id, text) {
 
-    // User exists ?? 
-  if (typeof text !== 'string' || typeof title !== 'string' )
-    {
-      window.alert ("Write only text please!"); 
-      return; 
-    }
-
-    if (Meteor.userId() === null) 
-    {
-      window.alert ("You are not registered! Please sign in."); 
-      return; 
-    }
-
-    Meteor.call('posts.insert', id, text, (err, res) => {if (err) alert(err.error)}); 
-
-  }
 
   render() {
     return (
       <div className="PostAdd">
+      
+      
 
       <h4>Escribe a la persona que quieres calificar y su califición </h4>
       <div>

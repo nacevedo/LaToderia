@@ -1,6 +1,6 @@
 /* Basic styling for the web site */
 body {
-	background: linear-gradient(to top right, rgba(12,183,225,1), rgba(22,202,202,1), rgba(29,219,182,1));
+	
 	background-repeat: no-repeat;
 	background-size:cover;
 }
