@@ -1,0 +1,350 @@
+[
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Arreglo o cambio tomas eléctricas"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Cámaras de seguridad"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Cambio bombillos Convertir a led"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Cambio de lámparas techo"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Conectar electrodomésticos"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Extensiones conexión teléfono"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Extensiones de tomas eléctricas. Multitomas"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Instalación Dimmer Normal o Led"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Instalación TDT"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Instalación timbres Inalámbricos"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Interruptores inalámbrico"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Lámparas de respaldo para ida de luz"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Lámparas exteriores"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Luces baños Mejora Modernización"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Luces con sensor de movimiento"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Ocultar cables eléctricos"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Reflectores recargables solares"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Sistemas de alarma para ventanas y puertas"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Supresores de picos de corriente para electrodomésticos"
+	},
+	{
+		"tipo": "Eléctrico",
+		"servicio": "Timers para encendido lámparas"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Ahorradores de agua"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Calentadores solares"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Cambio de griferías Lavamanos"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Cambio push lavamanos"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Cambio sanitarios lavamanos "
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Destapar sifones"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Filtros de Agua"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Instalación línea agua nevera"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Instalación lavadoras"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Instalación y/o cambio filtros de agua Nevera"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Reparación ajuste accesorios baños"
+	},
+	{
+		"tipo": "Plomería",
+		"servicio": "Reparación fugas de agua"
+	},
+	{
+		"tipo": "Vidrios",
+		"servicio": "Cambio de marcos"
+	},
+	{
+		"tipo": "Vidrios",
+		"servicio": "Cambio de vidrios"
+	},
+	{
+		"tipo": "Vidrios",
+		"servicio": "Divisiones"
+	},
+	{
+		"tipo": "Vidrios",
+		"servicio": "Espejos"
+	},
+	{
+		"tipo": "Vidrios",
+		"servicio": "Limpieza"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Ajustar Puertas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Ajuste puertas y muebles cocina"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Armado muebles modulares"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio bisagras"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio cerraduras"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio formica muebles cocina"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio guarda escobas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio pisos de sobreponer"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio puertas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Cambio rieles cajones"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Copias llaves cerraduras"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Fabricación muebles de almacenaje"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Instalación protectores patas sillas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Instalación repisas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Reforzar muebles alacenas"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Refuerzo muebles cocina"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Reparación de muebles"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Reparar rayones muebles"
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Servicio de tapizado "
+	},
+	{
+		"tipo": "Carpintería",
+		"servicio": "Tapizado muebles"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Colgado de cuadros"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Colgado de espejos"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Instalación accesorios baño"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Instalación cajas fuertes"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Instalación TVS Sonido"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Limpieza chimeneas"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Limpieza tapetes"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Limpieza y orden en depósitos"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Optimización de espacios "
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Organización de closets"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Pegado de piezas rotas"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Persianas y cortinas"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Reacomodación de muebles"
+	},
+	{
+		"tipo": "Servicios Varios",
+		"servicio": "Selección y disposición de cosas que no se usan"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Albañil"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Cambio baldosines"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Cambio rejillas"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Canales"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Embaldosinado"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Emboquillado"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Empaques puertas"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Empaques ventanas"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Humedades"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Impermeabilización"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Instalación Drywall"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Instalación esquineros"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Pintura paredes"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Pirlanes"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Resanes paredes"
+	},
+	{
+		"tipo": "Resanes",
+		"servicio": "Techos PVC"
+	}
+]
