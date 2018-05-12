@@ -20,6 +20,7 @@ import NavBar from "./NavBar";
 import AreasTrabajo from "./AreasTrabajo";
 import Why from "./Why";
 import About from "./About";
+import SolicitarServicio from "./SolicitarServicio";
 
 
 
@@ -147,6 +148,7 @@ export class App extends Component {
           <PostAdd onAdd = {this.onAdd.bind(this)}/> 
         <Why/>
         <About/>
+        <SolicitarServicio/>
         </div>
 
        
