@@ -16,6 +16,10 @@ import ChatList from "./ChatList";
 import ChatAlone from "./ChatAlone";
 import Ranking from "./Ranking";
 import PostAdd from "./PostAdd";
+import NavBar from "./NavBar";
+import AreasTrabajo from "./AreasTrabajo";
+import Why from "./Why";
+import About from "./About";
 
 
 
@@ -132,22 +136,17 @@ export class App extends Component {
               </ul>
             </div>
           </div>
-          <div id="menu" className="container">
-            <ul>
-              <li className="current_page_item"><a href="#" accessKey="1" title="">Home</a></li>
-              <li><a href="#" accessKey="1" title="">Servicios Residenciales</a></li>
-              <li><a href="#" accessKey="2" title="">Servicios Comerciales</a></li>
-              <li><a href="#" accessKey="3" title="">Porqué La Todería</a></li>
-              <li><a href="#" accessKey="4" title="">Acerca de Nosotros</a></li>
-              <li><a href="#" accessKey="5" title="">Solicitar servicio</a></li>
-            </ul>
-          </div>
+          
+           <NavBar />
+          
         </div>
 
         <div id="page" className="container">
           <h3> Hay {this.props.posts.length} técnicos </h3>
           <Ranking posts = {this.props.posts} />
           <PostAdd onAdd = {this.onAdd.bind(this)}/> 
+        <Why/>
+        <About/>
         </div>
 
        
@@ -173,6 +172,7 @@ export default withTracker(
     Meteor.subscribe("posts");
     return {
       posts: Posts.find({}, {sort: {voteCount:-1}}).fetch()
+     
     };
   }
 )(App);
