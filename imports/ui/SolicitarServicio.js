@@ -95,7 +95,7 @@ export default class SolicitarServicio extends Component {
   {
     res = [
       <option>Juan</option>,
-      <option>Gerarldo</option>,
+      <option>Gerardo</option>,
       <option>Pedro</option>,
       <option>Oscar</option>,
       <option>Shirley</option>
@@ -125,39 +125,41 @@ export default class SolicitarServicio extends Component {
 
       <h2>Solicitar Servicio</h2>
       <div>
-      <select id="route-selection" onChange={this.handleChangeArea.bind(this)} >
+      <select className="route-selection" onChange={this.handleChangeArea.bind(this)} >
       <option value="">Seleccione un Área de Trabajo</option>
       {this.state.areas.map((p,i) =>  <option key={i} value={p}> {p}</option>)}
       </select>
       </div>
       
       <div>
-      <select id="route-selection" onChange={this.handleChangeServicio.bind(this)} >
+      <select className="route-selection" onChange={this.handleChangeServicio.bind(this)} >
       <option value="">Seleccione un Servicio</option>
       {this.renderWorks()}
       </select>
       </div>
 
       <div>
-       <select id="hour-selection" onChange={this.handleChangeServicio.bind(this)} >
-      <option value="">Seleccione la hora</option>
+       <select className="route-selection" onChange={this.handleChangeServicio.bind(this)} >
+      <option value="">Seleccione un Horario</option>
       {this.renderHours()}
       </select>
       </div>
 
       <div>
-      <select id="tecnico-selection" onChange={this.handleChangeServicio.bind(this)} >
-      <option value="">Seleccione el técnico</option>
+      <select className="route-selection" onChange={this.handleChangeServicio.bind(this)} >
+      <option value="">Seleccione un Técnico</option>
       {this.renderTecnicians()}
       </select>
       </div>
       
 
       <div>
+      <input className="inn" type="date" name="diaServicio" min = {this.currentDate()} />
+      </div>
+      <div>
       <textarea className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
       </div>
-      <input type="date" name="diaServicio" min = {this.currentDate()} />
-      <button className="my-btn-2"
+      <button className="button2"
 
       onClick={
         () => 
