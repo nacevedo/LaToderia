@@ -37,27 +37,22 @@ DDPRateLimiter.addRule(commentInsert, 5, 5000);
 Meteor.methods({
 
 
-  'comments.insert'( postId, text) {
+  'comments.insert'(area, service, date, tecnician, hour, comment) {
 
-    
-
-    check(text, String); 
  
     // Make sure the user is logged in before inserting a task
-    if (! Meteor.user()) {
-      throw new Meteor.Error('not-authorized');
-    }
+    // if (! Meteor.user()) {
+    //   throw new Meteor.Error('not-authorized');
+    // }
   
  
     Comments.insert({
-      post: postId,
-      who: Meteor.user(), 
-      text,
-      voteCount:0,
-      votes:{
-        "👍":0
-      }
-
+      area: area, 
+      service: service, 
+      date: date, 
+      tecnician: tecnician, 
+      hour: hour, 
+      comment: comment
 
     });
   },

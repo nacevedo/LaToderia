@@ -93,29 +93,21 @@ export class App extends Component {
 
   }
 
-  onAdd(name, text) {
+  onAddService(area, service, date, tecnician, hour, comment) {
+    console.log("Area", area); 
+    Meteor.call('comments.insert', area, service, date, tecnician, hour,comment, (err, res) => {if (err) alert(err.error)}); 
 
-    // User exists ?? 
-    /**
-  if (typeof text !== 'string' || typeof title !== 'string' )
-    {
-      window.alert ("Write only text please!"); 
-      return; 
-    }
+  }
 
-    if (Meteor.userId() === null) 
-    {
-      window.alert ("You are not registered! Please sign in."); 
-      return; 
-    }
-    **/
+  onAdd(name,text) {
+
     if(name == "" || text == "")
     {
-      window.alert("No ha ingresado un campo"); 
+      Bert.alert("No ha ingresado un campo", 'warning','growl-bottom-right'); 
       return ;
     }
 
-    Meteor.call('posts.insert', name, text, (err, res) => {if (err) alert(err.error)}); 
+    Meteor.call('posts.insert', name, text, (err, res) => {if (err) alert(err.error)});
 
   }
 
@@ -139,7 +131,7 @@ export class App extends Component {
             </div>
           </div>
           
-           <NavBar />
+           <NavBar onAddService = {this.onAddService.bind(this)}/>
           
         </div>
 
@@ -149,7 +141,6 @@ export class App extends Component {
           <PostAdd onAdd = {this.onAdd.bind(this)}/> 
         <Why/>
         <About/>
-        
         </div>
 
        

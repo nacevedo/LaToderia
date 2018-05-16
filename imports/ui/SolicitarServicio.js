@@ -28,7 +28,7 @@ export default class SolicitarServicio extends Component {
   }
   
   clearContents(element) {
-    this.refs.title.value = '';
+    
     this.refs.text.value = ''; 
   }
 
@@ -171,9 +171,9 @@ export default class SolicitarServicio extends Component {
       onClick={
         () => 
         {
-          this.props.onAdd(this.refs.title.value, this.refs.text.value);
+          this.props.onAddService(this.state.selectValueArea, this.state.selectValueServicio, this.state.selectValueDate, this.state.selectValueTecnician, this.state.selectValueHour, this.refs.text.value);
           this.clearContents(this);
-          Bert.alert( 'El servicio ha sido reservado con éxito!', 'success', 'growl-top-right', 'fa-check' );
+          Bert.alert( '¡El servicio ha sido reservado con éxito!', 'success', 'growl-top-right', 'fa-check' );
         }
       }
       >Solicitar Servicio
