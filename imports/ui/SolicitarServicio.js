@@ -128,7 +128,7 @@ export default class SolicitarServicio extends Component {
 
   render() {
     return (
-      <div className="solicitar-servicio">
+      <div id="solicitar-servicio" className="container contenido">
 
       <h2>Solicitar Servicio</h2>
       <div>
