@@ -84,6 +84,26 @@ input.inn{
 	background-color: #FFF;
 }
 
+/* Combobox styles */
+
+select 
+{
+   -webkit-appearance: none;
+  
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   border-bottom-width: 1px;
+   border-bottom-color: #000;
+   background-color: #FFF;
+   border-radius: 0px;
+   padding: 15px;
+
+
+}
+
+
+
 
 /*********************************************************************************/
 /* Image Style                                                                   */
@@ -591,6 +611,7 @@ ul.style3 .first {
 		display: inline-block;
 		margin-top: 2em;
 		padding: 0em 1em;
+		border: none;
 		background: #FDBD49;
 		border-radius: 8px;
 		letter-spacing: 0.10em;

@@ -139,8 +139,10 @@ export class App extends Component {
           <h3> Hay {this.props.posts.length} técnicos </h3>
           <Ranking posts = {this.props.posts} />
           <PostAdd onAdd = {this.onAdd.bind(this)}/> 
-        <Why/>
-        <About/>
+
+        
+        
+
         </div>
 
        
