@@ -124,28 +124,35 @@ export default class SolicitarServicio extends Component {
       <div className="solicitar-servicio">
 
       <h2>Solicitar Servicio</h2>
-      
+      <div>
       <select id="route-selection" onChange={this.handleChangeArea.bind(this)} >
-
       <option value="">Seleccione un Área de Trabajo</option>
       {this.state.areas.map((p,i) =>  <option key={i} value={p}> {p}</option>)}
       </select>
+      </div>
       
+      <div>
       <select id="route-selection" onChange={this.handleChangeServicio.bind(this)} >
       <option value="">Seleccione un Servicio</option>
       {this.renderWorks()}
       </select>
+      </div>
 
+      <div>
        <select id="hour-selection" onChange={this.handleChangeServicio.bind(this)} >
       <option value="">Seleccione la hora</option>
       {this.renderHours()}
       </select>
+      </div>
 
+      <div>
       <select id="tecnico-selection" onChange={this.handleChangeServicio.bind(this)} >
       <option value="">Seleccione el técnico</option>
       {this.renderTecnicians()}
       </select>
+      </div>
       
+
       <div>
       <textarea className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
       </div>
