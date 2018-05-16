@@ -58,6 +58,29 @@ textarea {
 }
 
 /*********************************************************************************/
+/* Random needed Styles                                                          */
+/*********************************************************************************/
+
+h2#solicitar-servicio {
+	color: #000;
+}
+
+
+select.route-selection{
+	
+	margin: 10px;
+}
+
+textarea.com-text{
+	margin: 10px;
+}
+
+input.inn{
+	margin: 10px;
+}
+
+
+/*********************************************************************************/
 /* Image Style                                                                   */
 /*********************************************************************************/
 
@@ -564,6 +587,24 @@ ul.style3 .first {
 		margin-top: 2em;
 		padding: 0em 1em;
 		background: #FDBD49;
+		border-radius: 8px;
+		letter-spacing: 0.10em;
+		line-height: 3em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1em;
+		color: #FFF;
+	}
+	
+	.button2
+	{
+		display: inline-block;
+		margin: 10px;
+		margin-bottom: 100px;
+		padding: 0em 1em;
+		background: #FDBD49;
+		border: none;
 		border-radius: 8px;
 		letter-spacing: 0.10em;
 		line-height: 3em;
