@@ -30,7 +30,7 @@ class About extends Component {
 
   render() {
     return (
-      <div id="why">
+      <div id="about" className="container contenido">
            <h2>Acerca de La Todería</h2>
       <h4>{this.state.about}</h4>
       </div>

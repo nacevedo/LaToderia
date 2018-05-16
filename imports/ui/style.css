@@ -79,6 +79,11 @@ input.inn{
 	margin: 10px;
 }
 
+.contenido{
+
+	background-color: #FFF;
+}
+
 
 /*********************************************************************************/
 /* Image Style                                                                   */
@@ -233,7 +238,7 @@ hr {
 
 #menu a {
 	display: block;
-	padding: 0px 40px 0px 40px;
+	padding: 0px 15px 0px 15px;
 	line-height: 70px;
 	letter-spacing: 2px;
 	text-decoration: none;
