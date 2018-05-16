@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withTracker } from "meteor/react-meteor-data";
 import "./style.css";
 import "./fonts.css";
+import 'react-notifications/lib/notifications.css';
 
 import { Posts } from "../api/posts";
 import AccountsUIWrapper from './AccountsUIWrapper.js';
