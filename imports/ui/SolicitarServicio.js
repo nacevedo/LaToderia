@@ -43,11 +43,12 @@ export default class SolicitarServicio extends Component {
   handleChangeDate(e){
     this.setState({selectValueDate: new Date (e.target.value)});
   }
-  handleChangeTecnician(e){
-    this.setState({selectValueTecnician:e.target.value)};
-  }
 
   handleChangeTecnician(e){
+    this.setState({selectValueTecnician:e.target.value});
+  }
+
+  handleChangeHour(e){
     this.setState({selectValueHour: e.target.value});
   }
 
@@ -170,9 +171,8 @@ export default class SolicitarServicio extends Component {
       onClick={
         () => 
         {
-          //this.props.onAdd(this.refs.title.value, this.refs.text.value);
-          //this.clearContents(this);
-          console.log(NotificationManager); 
+          this.props.onAdd(this.refs.title.value, this.refs.text.value);
+          this.clearContents(this);
           Bert.alert( 'El servicio ha sido reservado con éxito!', 'success', 'growl-top-right', 'fa-check' );
         }
       }
