@@ -20,7 +20,7 @@ class Home extends Component {
 	render() {
 
 		return (
-			<div id="home-city">
+			<div id="home-city" className="container contenido">
 			
 				
 			</div>

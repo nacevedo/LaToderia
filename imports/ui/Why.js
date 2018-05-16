@@ -39,7 +39,7 @@ class Why extends Component {
 
   render() {
     return (
-      <div id="why">
+      <div id="why" className="container contenido">
            <h2>¿Por qué La Todería?</h2>
       {this.renderWhy()}
       </div>

@@ -15,6 +15,7 @@ class NavBar extends Component {
     render() {
         return (
             <Router>
+<div>
             <div id="menu" className="container">
             <div id="navbar-content">
             <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -56,15 +57,15 @@ class NavBar extends Component {
                                         </div>
                                         </nav>
                                         </div>
-
+                                        </div>
 
                                         <Route exact path="/" component={Home}/>
                                         <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
                                         <Route exact path="/porque-la-toderia" component={Why}/>
                                         <Route exact path="/acerca-de-nosotros" component={About}/>
                                         <Route exact path="/solicitar-servicio" component={SolicitarServicio}/>
-
                                         </div>
+                                      
                                         </Router>
 
                                         );

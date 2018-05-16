@@ -33,7 +33,7 @@ class AreasTrabajo extends Component {
 
   render() {
     return (
-      <div id="areas-trabajo">
+      <div id="areas-trabajo" className="container contenido">
            
       {this.renderWorks()}
       </div>
