@@ -149,7 +149,7 @@ export class App extends Component {
           <PostAdd onAdd = {this.onAdd.bind(this)}/> 
         <Why/>
         <About/>
-        <SolicitarServicio/>
+        
         </div>
 
        

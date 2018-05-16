@@ -23,9 +23,10 @@ export default class SolicitarServicio extends Component {
 
       "Servicios Varios",
 
-      "Resanes"]
+      "Resanes"], 
     };
   }
+  
   clearContents(element) {
     this.refs.title.value = '';
     this.refs.text.value = ''; 
@@ -33,12 +34,21 @@ export default class SolicitarServicio extends Component {
 
   handleChangeArea(e){
     this.setState({selectValueArea:e.target.value});
-    Session.set('route', e.target.value);
   }
 
   handleChangeServicio(e){
     this.setState({selectValueServicio:e.target.value});
-    Session.set('route', e.target.value);
+  }
+
+  handleChangeDate(e){
+    this.setState({selectValueDate: new Date (e.target.value)});
+  }
+  handleChangeTecnician(e){
+    this.setState({selectValueTecnician:e.target.value)};
+  }
+
+  handleChangeTecnician(e){
+    this.setState({selectValueHour: e.target.value});
   }
 
   renderWorks()
@@ -86,9 +96,7 @@ export default class SolicitarServicio extends Component {
       <option>19:30</option>,
       <option>20:30</option> ]
 
-      return res; 
-
-      
+      return res;    
   }
 
   renderTecnicians()
@@ -102,8 +110,6 @@ export default class SolicitarServicio extends Component {
        ]
 
       return res; 
-
-      
   }
 
   currentDate(){
@@ -115,7 +121,7 @@ export default class SolicitarServicio extends Component {
   else {
     respuesta = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
   }
-    console.log(respuesta); 
+    
     return respuesta; 
   }
 
@@ -139,14 +145,14 @@ export default class SolicitarServicio extends Component {
       </div>
 
       <div>
-       <select className="route-selection" onChange={this.handleChangeServicio.bind(this)} >
+       <select className="route-selection" onChange={this.handleChangeHour.bind(this)} >
       <option value="">Seleccione un Horario</option>
       {this.renderHours()}
       </select>
       </div>
 
       <div>
-      <select className="route-selection" onChange={this.handleChangeServicio.bind(this)} >
+      <select className="route-selection" onChange={this.handleChangeTecnician.bind(this)} >
       <option value="">Seleccione un Técnico</option>
       {this.renderTecnicians()}
       </select>
@@ -154,7 +160,7 @@ export default class SolicitarServicio extends Component {
       
 
       <div>
-      <input className="inn" type="date" name="diaServicio" min = {this.currentDate()} />
+      <input className="inn" type="date" name="diaServicio" min = {this.currentDate()} onChange={this.handleChangeDate.bind(this)} />
       </div>
       <div>
       <textarea className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
