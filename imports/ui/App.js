@@ -15,13 +15,12 @@ import Post from "./Post";
 import PostAlone from "./PostAlone";
 import ChatList from "./ChatList";
 import ChatAlone from "./ChatAlone";
-import Ranking from "./Ranking";
-import PostAdd from "./PostAdd";
 import NavBar from "./NavBar";
 import AreasTrabajo from "./AreasTrabajo";
 import Why from "./Why";
 import About from "./About";
 import SolicitarServicio from "./SolicitarServicio";
+import AgregarTecnico from "./AgregarTecnico";
 
 
 
@@ -32,7 +31,7 @@ export class App extends Component {
     this.state={
       city: "City",
       postName: "",
-      postID: "",
+      userID: "",
       chatID:"",
       user1:"",
       user2:"",
@@ -117,6 +116,8 @@ export class App extends Component {
   }
 
   render() {
+    console.log("app render" ,Meteor.userId());
+    console.log("app render roles" , Roles.userIsInRole(Meteor.userId(), ['super-admin']));
     return(
       <div> 
         <div id="header-wrapper">
@@ -136,24 +137,17 @@ export class App extends Component {
             </div>
           </div>
           
-           <NavBar onAddService = {this.onAddService.bind(this)}/>
+
+          <NavBar userID={Meteor.userId()} onAddService = {this.onAddService.bind(this)} posts = {this.props.posts} onAdd = {this.onAdd.bind(this)} numTec={this.props.posts.length}/>
           
         </div>
 
-        <div id="page" className="container">
-          <h3> Hay {this.props.posts.length} técnicos </h3>
-          <Ranking posts = {this.props.posts} />
-          <PostAdd onAdd = {this.onAdd.bind(this)}/> 
-
         
-        
-
-        </div>
 
        
 
         <div id="footer">
-          <p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a></p>
+          <p>&copy;  All rights reserved.</p>
         </div>
 
       </div> 
@@ -172,6 +166,7 @@ export default withTracker(
   () => {
     Meteor.subscribe("posts");
     return {
+      user : Meteor.user(),
       posts: Posts.find({}, {sort: {voteCount:-1}}).fetch()
      
     };

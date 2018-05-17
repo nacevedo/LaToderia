@@ -15,3 +15,8 @@ Meteor.startup(() => {
    });
 
 });
+
+Roles.addUsersToRoles("cHvGiAggQBbCJs6c3", ['super-admin']);
+var tt = Roles.userIsInRole("cHvGiAggQBbCJs6c3", ['super-admin']);
+
+console.log(tt)
