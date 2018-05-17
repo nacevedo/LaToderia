@@ -111,6 +111,11 @@ export class App extends Component {
 
   }
 
+  componentDidMount(){
+    console.log("hola"); 
+    Meteor.call('tweets.stream',(err, res) => {if (err) alert(err.error)});
+  }
+
   render() {
     return(
       <div> 

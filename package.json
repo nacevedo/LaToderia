@@ -11,6 +11,7 @@
     "d3": "^4.13.0",
     "heap": "^0.2.6",
     "meteor-node-stubs": "^0.3.2",
+    "moment": "^2.22.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-autosuggest": "^9.3.4",
@@ -19,7 +20,10 @@
     "react-notifications": "^1.4.3",
     "react-router-dom": "^4.2.2",
     "react-scrollview": "0.0.3",
-    "reactjs-popup": "^1.0.5"
+    "reactjs-popup": "^1.0.5",
+    "simpl-schema": "^1.5.0",
+    "steam-user": "^3.27.1",
+    "twitter": "^1.7.1"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",

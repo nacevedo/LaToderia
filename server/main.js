@@ -5,6 +5,7 @@ import "../imports/api/posts";
 import "../imports/api/chatMessages";
 import "../imports/api/chats";
 import "../imports/api/comments";
+import "../imports/api/tweets";
 
 
 Meteor.startup(() => {
