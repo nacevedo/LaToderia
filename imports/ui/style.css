@@ -166,6 +166,7 @@ hr {
 .container {
 	width: 1200px;
 	margin: 0px auto;
+	padding: 20px 100px;
 }
 
 .clearfix {
@@ -381,8 +382,8 @@ hr {
 
 #footer {
 	overflow: hidden;
-	background: #202020;
-	padding: 5em 0px 10em 0px;
+	background: #333;
+	padding: 3em 0px 4em 0px;
 }
 
 #footer p {

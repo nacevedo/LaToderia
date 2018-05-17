@@ -19,9 +19,9 @@ class AreasTrabajo extends Component {
   renderWorks()
   {
     let res=[];
-    console.log(areas);
+    
     for (let i in areas) {
-      console.log(areas[i].servicio);
+      
       res.push(
         <p className="work"
         

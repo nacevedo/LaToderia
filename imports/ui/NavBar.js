@@ -8,6 +8,7 @@ import AreasTrabajo from "./AreasTrabajo";
 import Why from "./Why";
 import About from "./About";
 import SolicitarServicio from "./SolicitarServicio";
+import AgregarTecnico from "./AgregarTecnico";
 
 class NavBar extends Component {
 
@@ -44,12 +45,13 @@ class NavBar extends Component {
             <li className="nav-item">
             <NavLink exact className="nav-link" to="/solicitar-servicio">Solicitar servicio</NavLink>
             </li>
-
-                                        {/*Roles.userIsInRole(this.props.currentUser, ['admin']) ?
+                                        {console.log("user" ,this.props.userID)}
+                                        {console.log(Roles.userIsInRole(Meteor.userId(), ['super-admin']))}
+                                        {Roles.userIsInRole(Meteor.userId(), ['super-admin']) ?
                                             <li className="nav-item">
-                                                <NavLink exact className="nav-link" to="/verify">Verify events</NavLink>
+                                                <NavLink exact className="nav-link" to="/agregar-técnico">Agregar un técnico</NavLink>
                                             </li> : ""
-                                        */}
+                                        }
                                         <li className="nav-item center-login"><AccountsUIWrapper/></li>
 
                                         </ul>
@@ -59,11 +61,12 @@ class NavBar extends Component {
                                         </div>
                                         </div>
 
-                                        <Route exact path="/" component={Home}/>
+                                        <Route exact path="/" render={() => <Home posts = {this.props.posts} onAdd = {this.props.onAdd} numTec={this.props.munTec}/>}/>
                                         <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
                                         <Route exact path="/porque-la-toderia" component={Why}/>
                                         <Route exact path="/acerca-de-nosotros" component={About}/>
                                         <Route exact path="/solicitar-servicio" component={SolicitarServicio}/>
+                                        <Route exact path="/agregar-técnico" component={AgregarTecnico}/>
                                         </div>
                                       
                                         </Router>

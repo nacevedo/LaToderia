@@ -10,3 +10,4 @@ Meteor.startup(() => {
   render(<App></App>,
     document.getElementById("render-target"));
 });
+
