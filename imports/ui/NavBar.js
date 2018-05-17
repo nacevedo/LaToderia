@@ -65,8 +65,10 @@ class NavBar extends Component {
                                         <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
                                         <Route exact path="/porque-la-toderia" component={Why}/>
                                         <Route exact path="/acerca-de-nosotros" component={About}/>
-                                        <Route exact path="/solicitar-servicio" component={SolicitarServicio}/>
+
+                                        <Route exact path="/solicitar-servicio" render={()=> <SolicitarServicio onAddService = {this.props.onAddService} />}/>
                                         <Route exact path="/agregar-técnico" component={AgregarTecnico}/>
+
                                         </div>
                                       
                                         </Router>
