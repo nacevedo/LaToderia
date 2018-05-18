@@ -71,8 +71,10 @@ select.route-selection{
 	margin: 10px;
 }
 
-textarea.com-text{
+input.com-text{
 	margin: 10px;
+	width: 400px;
+	min-height: 30px;
 }
 
 input.inn{
@@ -331,7 +333,7 @@ hr {
 	display: block;
 	padding: 0px 15px 0px 15px;
 	line-height: 70px;
-	letter-spacing: 1.8px;
+	letter-spacing: 1.5px;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
