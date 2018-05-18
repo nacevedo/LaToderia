@@ -38,20 +38,22 @@ DDPRateLimiter.addRule(postInsert, 5, 5000);
 
 Meteor.methods({
 
-  'posts.insert'(id, text) {
+  'posts.insert'(id, text,areas, services) {
    
    // check(text, String);
     // check(city, String);
     // check(text, String);
  
     // Make sure the user is logged in before inserting a task
-   // if (! Meteor.user()) {
-    //  throw new Meteor.Error('not-authorized');
-    //}
+    if (! Meteor.user()) {
+      throw new Meteor.Error('not-authorized');
+    }
 
     Posts.insert({
      name: id, 
-     cal : text
+     cal : text,
+     areas: areas,
+     services: services
    }); 
   },
   'posts.vote'(postId, emoji) {
