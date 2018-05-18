@@ -65,7 +65,7 @@ Meteor.methods({
 
     let postObj = Posts.findOne(idT);
 
-    console.log("llega hasta aca" + postObj); 
+    console.log("llega hasta aca" , postObj.numCal); 
 
     if (!postObj) {
       throw new Meteor.Error('Technician not found!');
@@ -73,11 +73,19 @@ Meteor.methods({
       //return;
     }
 
-    postObj.numCal+=1;
     
-    let prom = (postObj.cal * postObj.numCal)/(numCal+1);
+    var mult = postObj.cal * postObj.numCal;
+    console.log(mult);
+    console.log(calificacion);
+    console.log(postObj.numCal);
+    var up = mult+parseInt(calificacion);
+    console.log("up" ,up); 
+    var down = postObj.numCal +1;
+    console.log("down" ,down); 
+    var prom = up/down;
     console.log(prom);
     postObj.cal = prom;
+    postObj.numCal+=1;
 
     Posts.update(postObj._id,
       postObj);

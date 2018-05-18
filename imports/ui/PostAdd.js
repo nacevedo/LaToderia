@@ -55,6 +55,7 @@ export default class PostAdd extends Component {
           onClick={
             () => 
             {
+              console.log(this.state.selectValueTecnician);
               this.props.onVote(this.state.selectValueTecnician, this.refs.text.value);
               this.clearContents(this);
             }

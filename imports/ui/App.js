@@ -52,11 +52,11 @@ export class App extends Component {
   onVote(post, emoji) {
 
 
-    if (Meteor.userId() === null) 
-    {
-      window.alert ("You are not registered! Please sign in."); 
-      return; 
-    }
+    // if (Meteor.userId() === null) 
+    // {
+    //   window.alert ("You are not registered! Please sign in."); 
+    //   return; 
+    // }
     
     Meteor.call('posts.vote', post, emoji, (err, res) => {if (err) alert(err.error)}); 
     
