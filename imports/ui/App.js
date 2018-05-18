@@ -21,7 +21,7 @@ import Why from "./Why";
 import About from "./About";
 import SolicitarServicio from "./SolicitarServicio";
 import AgregarTecnico from "./AgregarTecnico";
-import TweetsList from "./TweetsList";
+import TweetList from "./TweetList";
 
 
 
