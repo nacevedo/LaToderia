@@ -95,6 +95,7 @@ div#myCarousel.carousel.slide{
 	overflow-y: hidden;
 }
 
+
 div.row.cuadro{
 	border: 1px;
 	color: #333;
@@ -117,6 +118,7 @@ div.row.cuadro{
 #why h4{
 	line-height: 50px;
 }
+
 /* Combobox styles */
 
 select 
