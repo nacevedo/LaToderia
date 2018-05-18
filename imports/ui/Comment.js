@@ -12,40 +12,6 @@ export default class Comment extends Component {
   }
 
 
-  renderVotes() {
-    let res=[];
-    for (let emoji in this.props.comment.votes) {
-      res.push(
-        <button className="my-btn-4"
-          onClick={() =>
-            this.props.onVote(
-              this.props.comment,
-              emoji
-            )}
-          key={emoji}>{emoji} {this.props.comment.votes[emoji]}</button>
-      );
-    }
-    return res;
-  }
-
-  addChat ()
-  {
-        if (Meteor.userId() === null) 
-    {
-      window.alert ("You are not registered! Please sign in."); 
-      return; 
-    }
-
-    Meteor.call('chats.insert', this.userName(), this.actualUN()); 
-
-    
-/**
-    Chats.insert({
-      user1: Meteor.user().username,  
-      user2: this.props.comment.who.username
-    });
-    **/
-  }
 
   actualUN() {
 

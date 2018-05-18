@@ -132,7 +132,7 @@ export default class AgregarTecnico extends Component {
       <h2>Agregar un Técnico</h2>
       <div>
       <h4>Nombre del técnico</h4>
-      <textarea className="com-text" role="textbox" type="text" placeholder="Nombre" aria-label="Nombre" ref="text"/>
+      <input className="com-text" role="textbox" type="text" placeholder="Nombre" aria-label="Nombre" ref="text"/>
       </div>
 
       <h4>¿Qué áreas de trabajo maneja el técnico?</h4>

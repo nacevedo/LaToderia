@@ -70,47 +70,58 @@ export default class SolicitarServicio extends Component {
   renderHours()
   {
     res = [
-      <option>8:00</option>,
-      <option>9:00</option>,
-      <option>10:00</option>,
-      <option>11:00</option>,
-      <option>12:00</option>,
-      <option>13:00</option>,
-      <option>14:00</option>,
-      <option>15:00</option>,
-      <option>16:00</option>,
-      <option>17:00</option>,
-      <option>18:00</option>,
-      <option>19:00</option>,
-      <option>20:00</option>,
-      <option>8:30</option>,
-      <option>9:30</option>,
-      <option>10:30</option>,
-      <option>11:30</option>,
-      <option>12:30</option>,
-      <option>13:30</option>,
-      <option>14:30</option>,
-      <option>15:30</option>,
-      <option>16:30</option>,
-      <option>17:30</option>,
-      <option>18:30</option>,
-      <option>19:30</option>,
-      <option>20:30</option> ]
+      <option key="1" >8:00</option>,
+      <option key="2" >8:30</option>,
+      <option key="3" >9:00</option>,
+      <option key="4" >9:30</option>,
+      <option key="5" >10:00</option>,
+      <option key="6" >10:30</option>,
+      <option key="7" >11:00</option>,
+      <option key="8" >11:30</option>,
+      <option key="9" >12:00</option>,
+      <option key="10" >12:30</option>,
+      <option key="11" >13:00</option>,
+      <option key="12" >13:30</option>,
+      <option key="13" >14:00</option>,
+      <option key="14" >14:30</option>,
+      <option key="15" >15:00</option>,
+      <option key="16" >15:30</option>,
+      <option key="17" >16:00</option>,
+      <option key="18" >16:30</option>,
+      <option key="19" >17:00</option>,
+      <option key="20" >17:30</option>,
+      <option key="21" >18:00</option>,
+      <option key="22" >18:30</option>,
+      <option key="23" >19:00</option>,
+      <option key="24" >19:30</option>,
+      <option key="25" >20:00</option>,
+      <option key="26" >20:30</option> 
+
+      ]
 
       return res;    
   }
 
+
   renderTecnicians()
   {
-    res = [
-      <option>Juan</option>,
-      <option>Gerardo</option>,
-      <option>Pedro</option>,
-      <option>Oscar</option>,
-      <option>Shirley</option>
-       ]
+    let res=[];
+    let tec = this.props.posts;
+    for (let i in tec) {
 
-      return res; 
+        if(tec[i].areas.includes(this.state.selectValueArea) && tec[i].services.includes(this.state.selectValueServicio) ){
+          res.push(
+          <option key={i} value={tec[i]._id}> {tec[i].name}</option>
+            );
+        }
+      
+      
+    }
+    return res;
+  }
+
+  handleChangeTecnician(e){
+    this.setState({selectValueTecnician:e.target.value});
   }
 
   currentDate(){
@@ -157,14 +168,14 @@ export default class SolicitarServicio extends Component {
       <option value="">Seleccione un Técnico</option>
       {this.renderTecnicians()}
       </select>
-      </div>
-      
+      </div>      
+
 
       <div>
       <input className="inn" type="date" name="diaServicio" min = {this.currentDate()} onChange={this.handleChangeDate.bind(this)} />
       </div>
       <div>
-      <textarea className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
+      <input className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
       </div>
       <button className="button2"
 
