@@ -34,7 +34,7 @@ class Home extends Component {
 					<div id="myCarousel" className="carousel slide" data-ride="carousel">
 					  
 					  <ol className="carousel-indicators">
-					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					    <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
 					    <li data-target="#myCarousel" data-slide-to="1"></li>
 					    <li data-target="#myCarousel" data-slide-to="2"></li>
 					    <li data-target="#myCarousel" data-slide-to="3"></li>
@@ -42,10 +42,10 @@ class Home extends Component {
 					  
 					  
 					  <div className="carousel-inner">
-					    <div class="item active">
+					    <div className="item active">
 					      <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Pintura" width = "300px"/>
 					    </div>
-					    <div class="item active">
+					    <div className="item active">
 					      <img src="https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="House" width = "300px"/>
 					    </div>
 					    <div className="item">
@@ -72,7 +72,7 @@ class Home extends Component {
 					</div>
 		          <h3> Calificaciones de los técnicos de La Todería</h3>
 		          <Ranking posts = {this.props.posts} />
-		          <PostAdd onAdd = {this.props.onAdd.bind(this)}/> 
+		          <PostAdd onVote = {this.props.onVote.bind(this)} posts={this.props.posts}/> 
 		        </div>
 			</div>
 			);

@@ -16,17 +16,104 @@ class AreasTrabajo extends Component {
 
   }
 
-  renderWorks()
+  renderElectrico()
   {
     let res=[];
     
     for (let i in areas) {
-      
-      res.push(
-        <p className="work"
+      if(areas[i].tipo == "Eléctrico"){
+        res.push(
+        <li className="work"
         
-          key={i}>{areas[i].servicio}</p>
+          key={i}>{areas[i].servicio}</li>
           );
+      }
+      
+    }
+    return res;
+  }
+
+  renderResanes()
+  {
+    let res=[];
+    
+    for (let i in areas) {
+      if(areas[i].tipo == "Resanes"){
+        res.push(
+        <li className="work"
+        
+          key={i}>{areas[i].servicio}</li>
+          );
+      }
+      
+    }
+    return res;
+  }
+
+  renderPlomería()
+  {
+    let res=[];
+    
+    for (let i in areas) {
+      if(areas[i].tipo == "Plomería"){
+        res.push(
+        <li className="work"
+        
+          key={i}>{areas[i].servicio}</li>
+          );
+      }
+      
+    }
+    return res;
+  }
+
+  renderVidrios()
+  {
+    let res=[];
+    
+    for (let i in areas) {
+      if(areas[i].tipo == "Vidrios"){
+        res.push(
+        <li className="work"
+        
+          key={i}>{areas[i].servicio}</li>
+          );
+      }
+      
+    }
+    return res;
+  }
+
+  renderCarpintería()
+  {
+    let res=[];
+    
+    for (let i in areas) {
+      if(areas[i].tipo == "Carpintería"){
+        res.push(
+        <li className="work"
+        
+          key={i}>{areas[i].servicio}</li>
+          );
+      }
+      
+    }
+    return res;
+  }
+
+  renderServiciosVarios()
+  {
+    let res=[];
+    
+    for (let i in areas) {
+      if(areas[i].tipo == "Servicios Varios"){
+        res.push(
+        <li className="work"
+        
+          key={i}>{areas[i].servicio}</li>
+          );
+      }
+      
     }
     return res;
   }
@@ -34,8 +121,45 @@ class AreasTrabajo extends Component {
   render() {
     return (
       <div id="areas-trabajo" className="container contenido">
-           
-      {this.renderWorks()}
+          <div className="row"> 
+          <div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Eléctrico</h4>
+      <ul>
+      {this.renderElectrico()}
+      </ul>
+      </div>
+      <div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Plomería</h4>
+      <ul>
+      {this.renderPlomería()}
+      </ul>
+      </div>
+<div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Vidrios</h4>
+      <ul>
+      {this.renderVidrios()}
+      </ul>
+      </div>
+      <div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Carpintería</h4>
+      <ul>
+      {this.renderCarpintería()}
+      </ul>
+      </div>
+      <div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Servicios Varios</h4>
+      <ul>
+      {this.renderServiciosVarios()}
+      </ul>
+      </div>
+
+      <div className="col-sm-2">
+      <h4><i className="fas fa-toolbox"></i> Resanes</h4>
+      <ul>
+      {this.renderResanes()}
+      </ul>
+      </div>
+      </div>
       </div>
       );
   }

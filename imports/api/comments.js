@@ -52,7 +52,8 @@ Meteor.methods({
       date: date, 
       tecnician: tecnician, 
       hour: hour, 
-      comment: comment
+      comment: comment,
+      who: Meteor.userId()
 
     });
   },

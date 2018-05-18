@@ -58,7 +58,7 @@ class NavBar extends Component {
                                                 <NavLink exact className="nav-link" to="/ver-solicitudes">Solicitudes</NavLink>
                                             </li> : ""
                                         }
-                                        <li className="nav-item center-login"><AccountsUIWrapper/></li>
+                                        <li className="nav-item "><AccountsUIWrapper/></li>
 
                                         </ul>
                                         </div>
@@ -67,7 +67,7 @@ class NavBar extends Component {
                                         </div>
                                         </div>
 
-                                        <Route exact path="/" render={() => <Home posts = {this.props.posts} onAdd = {this.props.onAdd} numTec={this.props.munTec}/>}/>
+                                        <Route exact path="/" render={() => <Home posts = {this.props.posts} onVote = {this.props.onVote} onAdd = {this.props.onAdd} numTec={this.props.munTec}/>}/>
                                         <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
                                         <Route exact path="/porque-la-toderia" component={Why}/>
                                         <Route exact path="/acerca-de-nosotros" component={About}/>

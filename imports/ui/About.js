@@ -32,7 +32,15 @@ class About extends Component {
     return (
       <div id="about" className="container contenido">
            <h2>Acerca de La Todería</h2>
+
+           <div className="row">
+            <div className="col-sm-3">
+              <img  src="images/logo.png" alt="Logo La Todería"/>
+            </div>
+            <div className="col-sm-9">
       <h4>{this.state.about}</h4>
+      </div>
+      </div>
       </div>
       );
   }

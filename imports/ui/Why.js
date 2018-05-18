@@ -40,8 +40,17 @@ class Why extends Component {
   render() {
     return (
       <div id="why" className="container contenido">
+
            <h2>¿Por qué La Todería?</h2>
+           <div className="row">
+            <div className="col-sm-3">
+              <img  src="images/logo.png" alt="Logo La Todería"/>
+            </div>
+            <div className="col-sm-9">
       {this.renderWhy()}
+      </div>
+      </div>
+      
       </div>
       );
   }
