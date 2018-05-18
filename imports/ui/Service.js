@@ -15,11 +15,7 @@ export default class Comment extends Component {
 
   render() {
     return (
-    <div>
-      <p> {this.props.tweet.author}</p>
-      <img src ={this.props.tweet.avatar}/>
-      <p> {this.props.tweet.body}</p>
-    </div> 
+      <h4> un Serviciiooooooo {this.props.service.area} </h4>
     );
   }
 }

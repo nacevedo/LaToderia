@@ -47,7 +47,7 @@ class Home extends Component {
 					    <div className="item active">
 					      <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Pintura" width = "300px"/>
 					    </div>
-					    <div className="item active">
+					    <div className="item">
 					      <img src="https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="House" width = "300px"/>
 					    </div>
 					    <div className="item">

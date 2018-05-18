@@ -4,6 +4,7 @@ import servicios from "./areas.json";
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import { Bert } from 'meteor/themeteorchef:bert';
+import Tecnicos from './Tecnicos'
 
 
 
@@ -164,6 +165,7 @@ export default class AgregarTecnico extends Component {
       >Agregar Técnico
       </button>
       </div>
+      <Tecnicos/>
       </div>
       );
   }
