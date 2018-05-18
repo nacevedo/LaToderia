@@ -31,6 +31,9 @@ class Ranking extends Component {
 	}
 
 	componentWillUpdate(newProps){
+
+		var svg = d3.select(this.svg); 
+		svg.selectAll(".node").remove();
 		
 		this.update(newProps);
 		console.log("wilupdate"); 
