@@ -25,26 +25,35 @@ class Home extends Component {
 		return (
 			<div id="home-city" className ="container contenido">
 				<div id="page" className="container">
+					
+					<div className="row">
+					  <div className="col-sm-3">
+					  	<img  src="images/logo.png" alt="Logo La Todería"/>
+					  </div>
+					  <div className="col-sm-9">
 					<div id="myCarousel" className="carousel slide" data-ride="carousel">
 					  
 					  <ol className="carousel-indicators">
 					    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 					    <li data-target="#myCarousel" data-slide-to="1"></li>
 					    <li data-target="#myCarousel" data-slide-to="2"></li>
+					    <li data-target="#myCarousel" data-slide-to="3"></li>
 					  </ol>
-
+					  
 					  
 					  <div className="carousel-inner">
 					    <div class="item active">
-					      <img src="https://www.shirley-davi.net/imagenes/logo.png" alt="Los Angeles" width = "300px"/>
+					      <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Pintura" width = "300px"/>
+					    </div>
+					    <div class="item active">
+					      <img src="https://images.pexels.com/photos/349749/kitchen-stove-sink-kitchen-counter-349749.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="House" width = "300px"/>
+					    </div>
+					    <div className="item">
+					      <img src="https://images.pexels.com/photos/345135/pexels-photo-345135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" alt="Carpinteria" width = "300px"/>
 					    </div>
 
 					    <div className="item">
-					      <img src="https://www.shirley-davi.net/imagenes/logo.png" alt="Chicago" width = "300px"/>
-					    </div>
-
-					    <div className="item">
-					      <img src="https://www.shirley-davi.net/imagenes/logo.png" alt="New York" width = "300px"/>
+					      <img src="https://images.pexels.com/photos/756883/pexels-photo-756883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" alt="Ventana" width = "300px"/>
 					    </div>
 					  </div>
 
@@ -54,11 +63,14 @@ class Home extends Component {
 					    <span className="sr-only">Previous</span>
 					  </a>
 					  <a className="right carousel-control" href="#myCarousel" data-slide="next">
-					    
+					    <span className="glyphicon glyphicon-chevron-right"></span>
 					    <span className="sr-only">Next</span>
 					  </a>
 					</div>
-		          <h3> Hay {this.props.numTec} técnicos </h3>
+					</div>
+
+					</div>
+		          <h3> Calificaciones de los técnicos de La Todería</h3>
 		          <Ranking posts = {this.props.posts} />
 		          <PostAdd onAdd = {this.props.onAdd.bind(this)}/> 
 		        </div>

@@ -84,6 +84,12 @@ input.inn{
 	background-color: #FFF;
 }
 
+div#myCarousel.carousel.slide{
+	max-height: 480px;
+	margin-right: 30px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
 /* Combobox styles */
 
 select 
@@ -166,7 +172,6 @@ hr {
 .container {
 	width: 1200px;
 	margin: 0px auto;
-	padding: 20px 100px;
 }
 
 .clearfix {
@@ -293,6 +298,8 @@ hr {
 	#page img
 	{
 		margin-bottom: 1em;
+		width: 100%;
+		max-height: 480px;
 	}
 
 	#page .title
