@@ -13,6 +13,13 @@ import Post from "./Post";
 import PostAlone from "./PostAlone";
 import NavBar from "./NavBar";
 
+import AreasTrabajo from "./AreasTrabajo";
+import Why from "./Why";
+import About from "./About";
+import SolicitarServicio from "./SolicitarServicio";
+import AgregarTecnico from "./AgregarTecnico";
+import TweetList from "./TweetList";
+
 
 
 
@@ -62,9 +69,10 @@ export class App extends Component {
   }
 
   render() {
-    
+
     return(
       <div> 
+      
         <div id="header-wrapper">
           <div id="header" className="container">
             <div id="logo">

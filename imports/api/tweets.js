@@ -28,7 +28,7 @@ Meteor.methods({
             access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
             access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
         });
-        
+        console.log("hola");
 
         /**
          * Stream statuses filtered by keyword
@@ -37,7 +37,7 @@ Meteor.methods({
         stream = client.stream("statuses/filter", {track: '#' + "latoderia"}, (stream) => {
             stream.on("data", Meteor.bindEnvironment(function (data) {
                 // Construct a new tweet object
-                
+                console.log("hola!");
                 const tweet = {
                     query: "latoderia",
                     twid: data["id"],
@@ -59,7 +59,7 @@ Meteor.methods({
                 Tweets.insert(tweet);
                 
                 
-                client.post('statuses/update', { in_reply_to_status_id: data["id_str"], status: '@' + tweet.screenname+ ' Visita nuestra nueva página web.. https://la-toderia.herokuapp.com'})
+                client.post('statuses/update', { in_reply_to_status_id: data["id_str"], status: '@' + tweet.screenname+ ' Visita nuestra nueva página web.. https://la-toderia.herokuapp.com !'})
                       .then(function (tweet) {
                         console.log(tweet);
                       })
