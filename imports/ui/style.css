@@ -91,10 +91,6 @@ div#myCarousel.carousel.slide{
 	overflow-y: hidden;
 }
 
-div.row.cuadro{
-	border: 1px;
-	color: #333;
-}
 /* Combobox styles */
 
 select 
