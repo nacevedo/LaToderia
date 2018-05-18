@@ -10,6 +10,7 @@ import About from "./About";
 import SolicitarServicio from "./SolicitarServicio";
 import AgregarTecnico from "./AgregarTecnico";
 import PostList from "./PostList";
+import Services from "./Services";
 
 class NavBar extends Component {
 
@@ -74,7 +75,7 @@ class NavBar extends Component {
 
                                         <Route exact path="/solicitar-servicio" render={()=> <SolicitarServicio onAddService = {this.props.onAddService} />}/>
                                         <Route exact path="/agregar-técnico" render={() => <AgregarTecnico onAdd={this.props.onAdd}/>}/>
-                                        <Route exact path="/ver-solicitudes" render={() => <PostList posts = {this.props.posts} />}/>
+                                        <Route exact path="/ver-solicitudes" render={() => <Services/> }/>
                                         </div>
                                       
                                         </Router>

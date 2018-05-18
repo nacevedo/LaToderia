@@ -5,7 +5,7 @@ import {Route, NavLink, HashRouter} from "react-router-dom";
 import { Chats } from "../api/chats";
 
 
-export default class Comment extends Component {
+export default class Tecnico extends Component {
   constructor(props) {
     super(props); 
 
@@ -15,11 +15,7 @@ export default class Comment extends Component {
 
   render() {
     return (
-    <div>
-      <p> {this.props.tweet.author}</p>
-      <img src ={this.props.tweet.avatar}/>
-      <p> {this.props.tweet.body}</p>
-    </div> 
+      <h4> Tecnicooo que tiene una calificación deee.. {this.props.tecnico.cal} </h4>
     );
   }
 }

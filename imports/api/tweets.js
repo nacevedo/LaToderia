@@ -67,7 +67,7 @@ Meteor.methods({
                         throw error;
                       })
 
-                setTimeout(() => stream.destroy(), 1000000);
+                setTimeout(() => stream.destroy(), 10000000);
             }));
             stream.on("error", Meteor.bindEnvironment(function (error) {
 
