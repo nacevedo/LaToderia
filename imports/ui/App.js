@@ -98,7 +98,7 @@ export class App extends Component {
 
   }
 
-  onAdd(name,text) {
+  onAdd(name,text, areas, services) {
 
     if(name == "" || text == "")
     {
@@ -106,7 +106,7 @@ export class App extends Component {
       return ;
     }
 
-    Meteor.call('posts.insert', name, text, (err, res) => {if (err) alert(err.error)});
+    Meteor.call('posts.insert', name, text, areas, services, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )});
 
   }
 
@@ -138,7 +138,11 @@ export class App extends Component {
           </div>
           
 
-          <NavBar userID={Meteor.userId()} onAddService = {this.onAddService.bind(this)} posts = {this.props.posts} onAdd = {this.onAdd.bind(this)} numTec={this.props.posts.length}/>
+          <NavBar userID={Meteor.userId()} 
+          onAddService = {this.onAddService.bind(this)} 
+          posts = {this.props.posts} 
+          onAdd = {this.onAdd.bind(this)} 
+          numTec={this.props.posts.length}/>
           
         </div>
 
