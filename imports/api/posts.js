@@ -53,30 +53,31 @@ Meteor.methods({
      name: id, 
      cal : text,
      areas: areas,
-     services: services
+     services: services,
+     numCal: 0
    }); 
   },
-  'posts.vote'(postId, emoji) {
+  'posts.vote'(idT, calificacion) {
 
-    check(postId, String);
-    check(emoji, String);
+    //check(postId, String);
+    //check(emoji, String);
 
 
-    let postObj = Posts.findOne(postId);
+    let postObj = Posts.findOne(idT);
 
     console.log("llega hasta aca" + postObj); 
 
     if (!postObj) {
-      throw new Meteor.Error('Post not found!');
+      throw new Meteor.Error('Technician not found!');
       //console.err("Post not found!");
       //return;
     }
 
-    postObj.voteCount+=1;
-    if (postObj.votes[emoji]===undefined) {
-      postObj.votes[emoji]=0;
-    }
-    postObj.votes[emoji]+=1;
+    postObj.numCal+=1;
+    
+    let prom = (postObj.cal * postObj.numCal)/(numCal+1);
+    console.log(prom);
+    postObj.cal = prom;
 
     Posts.update(postObj._id,
       postObj);

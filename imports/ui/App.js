@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withTracker } from "meteor/react-meteor-data";
 import "./style.css";
-import "./fonts.css";
 import 'react-notifications/lib/notifications.css';
 
 import { Posts } from "../api/posts";
@@ -10,12 +9,10 @@ import AccountsUIWrapper from './AccountsUIWrapper.js';
 
 import {Route, NavLink, HashRouter} from "react-router-dom";
 import Home from "./Home";
-import Stuff from "./Stuff";
 import Post from "./Post";
 import PostAlone from "./PostAlone";
-import ChatList from "./ChatList";
-import ChatAlone from "./ChatAlone";
 import NavBar from "./NavBar";
+
 import AreasTrabajo from "./AreasTrabajo";
 import Why from "./Why";
 import About from "./About";
@@ -25,91 +22,46 @@ import TweetList from "./TweetList";
 
 
 
+
 export class App extends Component {
   constructor(props) {
     super(props);
 
     this.state={
-      city: "City",
+      
       postName: "",
-      userID: "",
-      chatID:"",
-      user1:"",
-      user2:"",
       search: null
     };
   }
 
 
-  onChangeCity(newCity){
-    
-    this.setState({
-      city: newCity
-    });
-  }
-
-  onChangePost(newName){
-    
-    this.setState({
-      postName: newName
-    });
-  }
-
-  onChangePostID(id){
-    
-    this.setState({
-      postID: id
-    });
-
-  }
-
-  onChangeChatID(id){
-    
-    this.setState({
-      chatID: id
-    });
-
-  }
-
-  onChangeUser1(id){
-    
-    this.setState({
-      user1: id
-    });
-
-  }
-
-  onChangeUser2(id){
-    this.setState({
-      user2: id
-    });
-
-  }
-
-  filter(text){
-    this.setState({
-      search: text
-    }); 
-
-  }
+ 
 
   onAddService(area, service, date, tecnician, hour, comment) {
     console.log("Area", area); 
-    Meteor.call('comments.insert', area, service, date, tecnician, hour,comment, (err, res) => {if (err) alert(err.error)}); 
+    Meteor.call('comments.insert', area, service, date, tecnician, hour,comment, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )}); 
 
   }
 
   onAdd(name,text, areas, services) {
 
-    if(name == "" || text == "")
-    {
-      Bert.alert("No ha ingresado un campo", 'warning','growl-bottom-right'); 
-      return ;
-    }
-
     Meteor.call('posts.insert', name, text, areas, services, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )});
 
   }
+
+  onVote(post, emoji) {
+
+
+    if (Meteor.userId() === null) 
+    {
+      window.alert ("You are not registered! Please sign in."); 
+      return; 
+    }
+    
+    Meteor.call('posts.vote', post, emoji, (err, res) => {if (err) alert(err.error)}); 
+    
+  }
+
 
   componentDidMount(){
     console.log("hola"); 
@@ -117,8 +69,6 @@ export class App extends Component {
   }
 
   render() {
-    console.log("app render" ,Meteor.userId());
-    console.log("app render roles" , Roles.userIsInRole(Meteor.userId(), ['super-admin']));
 
     return(
       <div> 
@@ -131,11 +81,11 @@ export class App extends Component {
             </div>
             <div id="social">
               <ul className="contact">
-                <li><a href="#" className="icon icon-twitter"><span>Twitter</span></a></li>
-                <li><a href="#" className="icon icon-facebook"><span></span></a></li>
-                <li><a href="#" className="icon icon-google-plus"><span>Google+</span></a></li>
-                <li><a href="tel:3103292521" className="icon icon-phone"><span>3103292521</span></a></li> 
-                <li><a href="mailto:bergut19@hotmail.com" className="icon icon-envelope"><span>bergut19@hotmail.com</span></a></li> 
+                <li><a href="#" className="fab fa-twitter"><span>Twitter</span></a></li>
+                <li><a href="#" className="fab fa-facebook-f"><span></span></a></li>
+                <li><a href="#" className="fab fa-google-plus-g"><span>Google+</span></a></li>
+                <li><a href="tel:3103292521" className="fas fa-phone"><span>3103292521</span></a></li> 
+                <li><a href="mailto:bergut19@hotmail.com" className="far fa-envelope"><span>bergut19@hotmail.com</span></a></li> 
               </ul>
             </div>
           </div>
@@ -144,7 +94,8 @@ export class App extends Component {
           <NavBar userID={Meteor.userId()} 
           onAddService = {this.onAddService.bind(this)} 
           posts = {this.props.posts} 
-          onAdd = {this.onAdd.bind(this)} 
+          onAdd = {this.onAdd.bind(this)}
+          onVote = {this.onVote.bind(this)} 
           numTec={this.props.posts.length}/>
           
         </div>

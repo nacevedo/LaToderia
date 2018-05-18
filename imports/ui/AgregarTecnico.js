@@ -53,7 +53,7 @@ export default class AgregarTecnico extends Component {
         </div>
         <div className="col-sm-4">
         <input type = "checkbox" onChange = { () =>{
-          console.log(servicios[i].tipo); 
+          
           res = this.state.checkService;
           if(res.includes(servicios[i].servicio)){
             const index = res.indexOf(servicios[i].servicio);
@@ -62,11 +62,11 @@ export default class AgregarTecnico extends Component {
           else{
             res.push(servicios[i].servicio);
           }
-          console.log(res);
+          
           this.setState({
             checkService : res
           });
-          console.log(res); 
+         
         } } />
 
         </div>
@@ -98,7 +98,7 @@ export default class AgregarTecnico extends Component {
       </div>
       <div className="col-sm-4">
       <input type = "checkbox" onChange = { () =>{
-        console.log(p); 
+        
         res = this.state.checkArea;
         if(res.includes(p)){
           const index = res.indexOf(p);
@@ -107,11 +107,11 @@ export default class AgregarTecnico extends Component {
         else{
           res.push(p);
         }
-        console.log(res);
+       
         this.setState({
           checkArea : res
         });
-        console.log(res); 
+        
       } } />
 
       </div>
