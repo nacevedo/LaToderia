@@ -23,6 +23,7 @@
     "react-router-dom": "^4.2.2",
     "react-scrollview": "0.0.3",
     "reactjs-popup": "^1.0.5",
+    "recharts": "^1.0.0-beta.10",
     "simpl-schema": "^1.5.0",
     "steam-user": "^3.27.1",
     "twitter": "^1.7.1"
