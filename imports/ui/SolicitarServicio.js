@@ -143,39 +143,40 @@ export default class SolicitarServicio extends Component {
 
       <h2>Solicitar Servicio</h2>
       <div>
-      <select className="custom-select" onChange={this.handleChangeArea.bind(this)} >
+      <select className="custom-select form-control" onChange={this.handleChangeArea.bind(this)} >
       <option value="">Seleccione un Área de Trabajo</option>
       {this.state.areas.map((p,i) =>  <option key={i} value={p}> {p}</option>)}
       </select>
       </div>
-      
+      <br/>
       <div>
-      <select className="custom-select" onChange={this.handleChangeServicio.bind(this)} >
+      <select className="custom-select form-control" onChange={this.handleChangeServicio.bind(this)} >
       <option value="">Seleccione un Servicio</option>
       {this.renderWorks()}
       </select>
       </div>
-
+<br/>
       <div>
-       <select className="custom-select" onChange={this.handleChangeHour.bind(this)} >
+       <select className="custom-select form-control" onChange={this.handleChangeHour.bind(this)} >
       <option value="">Seleccione un Horario</option>
       {this.renderHours()}
       </select>
       </div>
-
+      <br/>
       <div>
-      <select className="custom-select" onChange={this.handleChangeTecnician.bind(this)} >
+      <select className="custom-select form-control" onChange={this.handleChangeTecnician.bind(this)} >
       <option value="">Seleccione un Técnico</option>
       {this.renderTecnicians()}
       </select>
       </div>      
-
+<br/>
 
       <div>
-      <input className="inn" type="date" name="diaServicio" min = {this.currentDate()} onChange={this.handleChangeDate.bind(this)} />
+      <input className="form-control" type="date" name="diaServicio" min = {this.currentDate()} onChange={this.handleChangeDate.bind(this)} />
       </div>
       <div>
-      <input className="com-text" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
+      <br/>
+      <input className="form-control" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
       </div>
       <button className="button2"
 

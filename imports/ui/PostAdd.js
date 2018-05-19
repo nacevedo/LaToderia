@@ -42,7 +42,7 @@ export default class PostAdd extends Component {
       <h4>Seleccione el nombre del técnico al que quiere calificar y su califición </h4>
       
       <div>
-      <select className="custom-select" onChange={this.handleChangeTecnician.bind(this)} >
+      <select className="custom-select form-control" onChange={this.handleChangeTecnician.bind(this)} >
       <option value="">Seleccione un Técnico</option>
       {this.renderWorks()}
       </select>

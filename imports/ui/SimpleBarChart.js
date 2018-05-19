@@ -21,7 +21,7 @@ class SimpleBarChart extends Component {
         <YAxis/>
         <Tooltip/>
         <Legend />
-        <Bar dataKey="cuantos" fill="#82ca9d" />
+        <Bar dataKey="cuantos" fill="#B93A37" />
     </BarChart>
     );
    }    
