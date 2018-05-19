@@ -54,7 +54,7 @@ class Services extends Component {
   renderPosts() {
     return this.props.comments.slice(0, this.state.showItems).map((p,i) =>
       <div className="col-sm-4" key = {i}>
-       <div className="box3">
+       <div className="panel">
           <Service service = {p}/>
       </div>
       </div>
@@ -65,17 +65,25 @@ class Services extends Component {
   
   render() {
     return (
-      <div className="PostList container contenido">
-        
+      <div className="services container contenido">
+        <h2>Número de cada tipo de servicio solicitado</h2>
+        <div id="graph">
+
+         <SimpleBarChart data = {this.handleData()}/>
+         </div>
+
+         
+
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
-        <button className="my-btn-6" onClick={this.handleShowMore}>
+        <button className="button" onClick={this.handleShowMore}>
           Show more!
         </button>
         </div>
-        <SimpleBarChart data = {this.handleData()}/>
+        
         </div>
+
       </div>
     );
   }

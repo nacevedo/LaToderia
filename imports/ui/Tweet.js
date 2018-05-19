@@ -15,10 +15,18 @@ export default class Comment extends Component {
 
   render() {
     return (
-    <div>
-      <p> {this.props.tweet.author}</p>
+    <div className="panel-body">
+    <div className="row">
+      <div className="col-sm-4">
       <img src ={this.props.tweet.avatar}/>
+      </div>
+      <div className="col-sm-8">
+      <h5> {this.props.tweet.author}</h5>
+      </div>
+      </div>
+      <div>
       <p> {this.props.tweet.body}</p>
+      </div>
     </div> 
     );
   }

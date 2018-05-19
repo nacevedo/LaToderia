@@ -15,7 +15,9 @@ export default class Comment extends Component {
 
   render() {
     return (
+    	<div className="panel-body">
       <h4> un Serviciiooooooo {this.props.service.area} </h4>
+      </div>
     );
   }
 }

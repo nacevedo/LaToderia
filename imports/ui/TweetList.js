@@ -29,8 +29,8 @@ class TweetList extends Component {
 
   renderPosts() {
     return this.props.tweets.slice(0, this.state.showItems).map((p,i) =>
-      <div className="col-sm-4" key = {i}>
-       <div className="box3">
+      <div className="col-sm-3" key = {i}>
+       <div className="panel">
           <Tweet tweet = {p}/>
       </div>
       </div>
