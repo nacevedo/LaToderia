@@ -65,7 +65,7 @@ class Services extends Component {
   
   render() {
     return (
-      <div className="PostList">
+      <div className="PostList container contenido">
         
         {this.renderPosts()}
         <div className="row">

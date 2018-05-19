@@ -35,7 +35,7 @@ export default class PostAdd extends Component {
 
   render() {
     return (
-      <div className="PostAdd">
+      <div className="calificar">
       
       
 
