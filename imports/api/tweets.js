@@ -19,7 +19,7 @@ Meteor.methods({
     "tweets.stream"() {
 
         
-        
+        Tweets.remove({});
         var Twitter = require("twitter");
 
         var client = new Twitter({
@@ -44,7 +44,8 @@ Meteor.methods({
                     author: data["user"]["name"],
                     avatar: data["user"]["profile_image_url"],
                     body: data["text"],
-                    screenname: data["user"]["screen_name"]
+                    screenname: data["user"]["screen_name"],
+                    _id: data["id"]
                 };
 
                 new SimpleSchema({
@@ -67,7 +68,7 @@ Meteor.methods({
                         throw error;
                       })
 
-                setTimeout(() => stream.destroy(), 100000);
+                setTimeout(() => stream.destroy(), 1000000);
             }));
             stream.on("error", Meteor.bindEnvironment(function (error) {
 
