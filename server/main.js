@@ -16,7 +16,5 @@ Meteor.startup(() => {
 
 });
 
-Roles.addUsersToRoles("W8HhjwKvhvMT824QQ", ['super-admin']);
-var tt = Roles.userIsInRole("cHvGiAggQBbCJs6c3", ['super-admin']);
 
-console.log(tt)
+
