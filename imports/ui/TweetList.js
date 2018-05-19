@@ -41,12 +41,12 @@ class TweetList extends Component {
   
   render() {
     return (
-      <div className="PostList">
+      <div className="tweet-list">
         
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
-        <button className="my-btn-6" onClick={this.handleShowMore}>
+        <button className="button" onClick={this.handleShowMore}>
           Show more!
         </button>
         </div>

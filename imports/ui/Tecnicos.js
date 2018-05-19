@@ -30,7 +30,7 @@ class Tecnicos extends Component {
   renderPosts() {
     return this.props.posts.slice(0, this.state.showItems).map((p,i) =>
       <div className="col-sm-4" key = {i}>
-       <div className="box3">
+       <div className="panel panel-default">
           <Tecnico tecnico = {p}/>
       </div>
       </div>
@@ -41,12 +41,12 @@ class Tecnicos extends Component {
   
   render() {
     return (
-      <div className="PostList">
+      <div className="tec-list">
         
         {this.renderPosts()}
         <div className="row">
         <div className="col-sm-12">
-        <button className="my-btn-6" onClick={this.handleShowMore}>
+        <button className="button" onClick={this.handleShowMore}>
           Show more!
         </button>
         </div>

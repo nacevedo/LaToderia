@@ -4,7 +4,7 @@ import Autosuggest from 'react-autosuggest';
 import {Route, NavLink, HashRouter} from "react-router-dom";
 import Ranking from "./Ranking";
 import PostAdd from "./PostAdd";
-import TweetList from "./TweetList";
+
 
 class Home extends Component {
 
@@ -25,7 +25,7 @@ class Home extends Component {
 		return (
 
 			<div id="home-city" className ="container contenido">
-				<TweetList/>
+				
 				<div id="page" className="container">
 					
 					<div className="row">

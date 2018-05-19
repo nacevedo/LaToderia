@@ -35,6 +35,18 @@ export default class AgregarTecnico extends Component {
     this.refs.text.value = ''; 
   }
 
+  uncheckAll(ele) {
+     var checkboxes = document.getElementsByTagName('input');
+     
+         for (var i = 0; i < checkboxes.length; i++) {
+             console.log(i)
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = false;
+             }
+         }
+     }
+ 
+
 
   renderWorks()
   {
@@ -50,6 +62,7 @@ export default class AgregarTecnico extends Component {
         
         <div className="row">
         <div className="col-sm-8">
+
         <p> {servicios[i].servicio} </p>
         </div>
         <div className="col-sm-4">
@@ -133,7 +146,7 @@ export default class AgregarTecnico extends Component {
       <h2>Agregar un Técnico</h2>
       <div>
       <h4>Nombre del técnico</h4>
-      <input className="com-text" role="textbox" type="text" placeholder="Nombre" aria-label="Nombre" ref="text"/>
+      <input className="com-text" role="textbox" type="text" placeholder="Nombre" aria-label="Nombre" ref="text" required/>
       </div>
 
       <h4>¿Qué áreas de trabajo maneja el técnico?</h4>
@@ -157,9 +170,18 @@ export default class AgregarTecnico extends Component {
       onClick={
         () => 
         {
-          this.props.onAdd(this.refs.text.value, 0, this.state.checkArea, this.state.checkService);
+          if(this.refs.text.value != "")
+          {
+            this.props.onAdd(this.refs.text.value, 0, this.state.checkArea, this.state.checkService);
           this.clearContents(this);
+          this.uncheckAll(this);
           Bert.alert( '¡El técnico ha sido agregado con éxito!', 'success', 'growl-top-right', 'fa-check' );
+          }
+          else{
+
+          Bert.alert( '¡No insertó el nombre, no se pudo agregar el técnico!', 'warning', 'growl-top-right', 'fa-check' );
+          }
+          
         }
       }
       >Agregar Técnico

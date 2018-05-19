@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Comments } from "../api/comments";
 import { withTracker } from "meteor/react-meteor-data";
 import {Route, NavLink, HashRouter} from "react-router-dom";
-
+import TweetList from "./TweetList";
 
 
 class Why extends Component {
@@ -31,7 +31,7 @@ class Why extends Component {
       res.push(
         <h4 className="whyL"
         
-          key={i}>{this.state.lista[i]}</h4>
+          key={i}><i className="fas fa-wrench"></i> {this.state.lista[i]}</h4>
           );
     }
     return res;
@@ -50,7 +50,8 @@ class Why extends Component {
       {this.renderWhy()}
       </div>
       </div>
-      
+      <h2>Los clientes también comentan sobre La Todería</h2>
+      <TweetList/>
       </div>
       );
   }
