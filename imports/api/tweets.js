@@ -19,7 +19,7 @@ Meteor.methods({
     "tweets.stream"() {
 
         
-        Tweets.remove({});
+        
         var Twitter = require("twitter");
 
         var client = new Twitter({
@@ -67,7 +67,7 @@ Meteor.methods({
                         throw error;
                       })
 
-                setTimeout(() => stream.destroy(), 10000000);
+                setTimeout(() => stream.destroy(), 100000);
             }));
             stream.on("error", Meteor.bindEnvironment(function (error) {
 
