@@ -25,7 +25,7 @@ meteor test --driver-package=cultofcoders:mocha --port 3100
 ```
 
 ## Motivation
-This is a project for a [web development class](http://johnguerra.co/classes/webDevelopment_spring_2018/) in [Uniandes](https://www.uniandes.edu.co). The objective is to make a quick project using **Meteor with React**.
+This is a project for a [web development class](http://johnguerra.co/classes/webDevelopment_spring_2018/) in [Uniandes](https://www.uniandes.edu.co). The objective is to make a quick project using **Meteor with React**. 
 
 ## Contributing
 If anyone wants to give me any help or ideas, you can by making new [Issues](ttps://github.com/nacevedo/LaToderia/issues) or a [Pull requests](https://github.com/nacevedo/LaToderia/pulls).
