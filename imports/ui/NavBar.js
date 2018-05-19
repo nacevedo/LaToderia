@@ -18,7 +18,7 @@ class NavBar extends Component {
     render() {
         return (
             <Router>
-<div>
+            <div>
             <div id="menu" className="container">
             <div id="navbar-content">
             <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -43,44 +43,44 @@ class NavBar extends Component {
             <NavLink exact className="nav-link" to="/acerca-de-nosotros">Acerca de Nosotros</NavLink>
             </li>
 
-
+            
             <li className="nav-item">
             <NavLink exact className="nav-link" to="/solicitar-servicio">Solicitar servicio</NavLink>
-            </li>
-                                    
-                                        {Roles.userIsInRole(Meteor.userId(), ['super-admin']) ?
-                                            <li className="nav-item">
-                                                <NavLink exact className="nav-link" to="/agregar-técnico">Agregar un técnico</NavLink>
-                                            </li> : ""
-                                        }
+            </li> 
 
-                                        {Roles.userIsInRole(Meteor.userId(), ['super-admin']) ?
-                                            <li className="nav-item">
-                                                <NavLink exact className="nav-link" to="/ver-solicitudes">Solicitudes</NavLink>
-                                            </li> : ""
-                                        }
-                                        <li className="nav-item "><AccountsUIWrapper/></li>
+            {Roles.userIsInRole(Meteor.userId(), ['super-admin']) ?
+            <li className="nav-item">
+            <NavLink exact className="nav-link" to="/agregar-técnico">Agregar un técnico</NavLink>
+            </li> : ""
+        }
 
-                                        </ul>
-                                        </div>
-                                        </div>
-                                        </nav>
-                                        </div>
-                                        </div>
+        {Meteor.userId() != undefined ?
+            <li className="nav-item">
+            <NavLink exact className="nav-link" to="/ver-solicitudes">Solicitudes</NavLink>
+            </li> : ""
+        }
+        <li className="nav-item "><AccountsUIWrapper/></li>
 
-                                        <Route exact path="/" render={() => <Home posts = {this.props.posts} onVote = {this.props.onVote} onAdd = {this.props.onAdd} numTec={this.props.munTec}/>}/>
-                                        <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
-                                        <Route exact path="/porque-la-toderia" component={Why}/>
-                                        <Route exact path="/acerca-de-nosotros" component={About}/>
+        </ul>
+        </div>
+        </div>
+        </nav>
+        </div>
+        </div>
 
-                                        <Route exact path="/solicitar-servicio" render={()=> <SolicitarServicio posts = {this.props.posts} onAddService = {this.props.onAddService} />}/>
-                                        <Route exact path="/agregar-técnico" render={() => <AgregarTecnico onAdd={this.props.onAdd}/>}/>
-                                        <Route exact path="/ver-solicitudes" render={() => <Services/> }/>
-                                        </div>
-                                      
-                                        </Router>
+        <Route exact path="/" render={() => <Home posts = {this.props.posts} onVote = {this.props.onVote} onAdd = {this.props.onAdd} numTec={this.props.munTec}/>}/>
+        <Route exact path="/areas-de-trabajo" component={AreasTrabajo}/>
+        <Route exact path="/porque-la-toderia" component={Why}/>
+        <Route exact path="/acerca-de-nosotros" component={About}/>
 
-                                        );
+        <Route exact path="/solicitar-servicio" render={()=> <SolicitarServicio posts = {this.props.posts} onAddService = {this.props.onAddService} />}/>
+        <Route exact path="/agregar-técnico" render={() => <AgregarTecnico onAdd={this.props.onAdd}/>}/>
+        <Route exact path="/ver-solicitudes" render={() => <Services/> }/>
+        </div>
+
+        </Router>
+
+        );
     }
 }
 

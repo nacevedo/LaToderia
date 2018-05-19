@@ -53,7 +53,8 @@ Meteor.methods({
       tecnician: tecnician, 
       hour: hour, 
       comment: comment,
-      who: Meteor.user().profile.name
+      who: Meteor.user().profile.name,
+      whoId: Meteor.userId()
 
     });
   },

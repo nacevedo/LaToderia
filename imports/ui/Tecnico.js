@@ -27,12 +27,12 @@ export default class Tecnico extends Component {
   render() {
     return (
     	<div className="panel-body">
-      <h5>  {this.props.tecnico.name} </h5>
+      <h4>  {this.props.tecnico.name} </h4>
       <p> Calificación promedio: {this.props.tecnico.cal} </p>
 
-      <h6> Áreas </h6>
+      <h5> Áreas </h5>
       {this.renderAreas()}
-      <h6> Servicios </h6>
+      <h5> Servicios </h5>
       {this.renderServices()}
     </div>
     );

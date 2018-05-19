@@ -352,9 +352,9 @@ hr {
 
 #menu a {
 	display: block;
-	padding: 0px 15px 0px 15px;
+	padding: 0px 12px 0px 12px;
 	line-height: 70px;
-	letter-spacing: 1.5px;
+	letter-spacing: 1px;
 	text-decoration: none;
 	text-transform: uppercase;
 	text-align: center;
