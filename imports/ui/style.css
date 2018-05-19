@@ -6,7 +6,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 	background: #F8F8F8 url(images/overlay.png) repeat;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 12pt;
 	font-weight: 400;
 	color: rgba(0,0,0,.8);
@@ -114,13 +114,22 @@ div.row.cuadro{
 
 #why img{
 	width: 100%;
-	padding-bottom: 200px;
+	padding-bottom: 20px;
 }
 
 #why h4{
 	line-height: 50px;
 }
 
+.tweet-list button{
+	margin-bottom: 30px;
+	margin-left: 44%;
+}
+
+.tec-list button{
+	margin-bottom: 30px;
+	margin-left: 44%;
+}
 /* Combobox styles */
 
 select 
