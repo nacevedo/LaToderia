@@ -34,7 +34,7 @@ If anyone wants to give me any help or ideas, you can by making new [Issues](ttp
 **Bibiana Gamba** 👩🏽‍🎨
 **Nicolás Acevedo** 👨🏼‍🔬
 # Beta
-Beta versión! Please write use to include any suggestions 😉...
+Beta versión! We are open to suggestions
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
