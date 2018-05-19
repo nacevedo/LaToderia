@@ -174,10 +174,12 @@ export default class SolicitarServicio extends Component {
       <div>
       <input className="form-control" type="date" name="diaServicio" min = {this.currentDate()} onChange={this.handleChangeDate.bind(this)} />
       </div>
-      <div>
       <br/>
+      <div>
+      
       <input className="form-control" role="textbox" type="text" placeholder="Comentarios" aria-label="Comentarios" ref="text"/>
       </div>
+      <br/>
       <button className="button2"
 
       onClick={
@@ -185,7 +187,7 @@ export default class SolicitarServicio extends Component {
         {
           this.props.onAddService(this.state.selectValueArea, this.state.selectValueServicio, this.state.selectValueDate, this.state.selectValueTecnician, this.state.selectValueHour, this.refs.text.value);
           this.clearContents(this);
-          Bert.alert( '¡El servicio ha sido reservado con éxito!', 'success', 'growl-top-right', 'fa-check' );
+          
         }
       }
       >Solicitar Servicio

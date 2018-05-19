@@ -18,6 +18,9 @@ export default class Comment extends Component {
     	<div className="panel-body">
     	<h5>{this.props.service.who}</h5>
       <p> Área: {this.props.service.area} </p>
+      <p> Servicio: {this.props.service.service} </p>
+      <p> Hora: {this.props.service.hour} </p>
+      <p> Comentarios: {this.props.service.comment} </p>
       </div>
     );
   }
