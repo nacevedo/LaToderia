@@ -75,14 +75,12 @@ select.route-selection{
 }
 
 input.com-text{
-	margin: 10px;
+	margin: 0px;
 	width: 400px;
 	min-height: 30px;
 }
 
-input.inn{
-	margin: 10px;
-}
+
 
 .contenido{
 
@@ -729,8 +727,8 @@ ul.style3 .first {
 	.button2
 	{
 		display: inline-block;
-		margin: 10px;
-		margin-bottom: 100px;
+		margin-top: 15px;
+		margin-bottom: 80px;
 		padding: 0em 1em;
 		background: #FDBD49;
 		border: none;
