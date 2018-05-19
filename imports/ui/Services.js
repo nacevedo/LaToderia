@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import { Comments } from "../api/comments";
 import { withTracker } from "meteor/react-meteor-data";
 import Service from "./Service";
+import SimpleBarChart from "./SimpleBarChart";
 
 
 class Services extends Component {
@@ -26,6 +27,29 @@ class Services extends Component {
             this.state.showItems : this.state.showItems + 10
       })
     }
+
+  handleData(){
+    var data = []; 
+    var servicios = this.props.comments; 
+    var tiposServicios = []; 
+
+    for (var i = 0; i < servicios.length ; i++)
+    {
+       if(!tiposServicios.includes(servicios[i].service))
+       {
+        tiposServicios.push(servicios[i].service);
+        data.push({name: servicios[i].service, cuantos: 0});
+       }
+       console.log(servicios[i].service);
+        for (var j = 0; j < data.length; j++){
+          if (data[j].name == servicios[i].service){
+            data[j].cuantos++; 
+          }
+        }
+    }
+    console.log(data);
+    return data; 
+  }
 
   renderPosts() {
     return this.props.comments.slice(0, this.state.showItems).map((p,i) =>
@@ -50,6 +74,7 @@ class Services extends Component {
           Show more!
         </button>
         </div>
+        <SimpleBarChart data = {this.handleData()}/>
         </div>
       </div>
     );
