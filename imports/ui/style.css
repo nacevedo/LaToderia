@@ -139,6 +139,13 @@ div.row.cuadro{
 	margin-left: 44%;
 }
 
+
+
+#graph{
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
 /* Combobox styles */
 
 select 
