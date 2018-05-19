@@ -133,6 +133,19 @@ div.row.cuadro{
 	margin-bottom: 30px;
 	margin-left: 44%;
 }
+
+.services button{
+	margin-bottom: 30px;
+	margin-left: 44%;
+}
+
+
+
+#graph{
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
 /* Combobox styles */
 
 select 
