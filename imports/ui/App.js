@@ -20,6 +20,8 @@ import SolicitarServicio from "./SolicitarServicio";
 import AgregarTecnico from "./AgregarTecnico";
 import TweetList from "./TweetList";
 
+import { Bert } from 'meteor/themeteorchef:bert';
+
 
 
 
@@ -38,27 +40,64 @@ export class App extends Component {
  
 
   onAddService(area, service, date, tecnician, hour, comment) {
-    console.log("Area", area); 
-    Meteor.call('comments.insert', area, service, date, tecnician, hour,comment, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )}); 
+    
+    if (Meteor.userId() === null) 
+    {
+       
+      Bert.alert( '¡No está registrado, por favor inicie sesión!', 'danger', 'growl-top-right', 'fa-remove' );
+      return; 
+    }
+    if(area == undefined || service == undefined || date == undefined || tecnician == undefined|| hour == undefined || comment == undefined){
+        Bert.alert( '¡No ha seleccionado un campo!', 'warning', 'growl-top-right', 'fa-warning' );
+    }
+    else{
+       Meteor.call('comments.insert', area, service, date, tecnician, hour,comment, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )}); 
+       Bert.alert( '¡El servicio ha sido reservado con éxito!', 'success', 'growl-top-right', 'fa-check' );
+    }
+    
 
   }
 
   onAdd(name,text, areas, services) {
 
-    Meteor.call('posts.insert', name, text, areas, services, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )});
+    console.log(areas);
+
+    if (Meteor.userId() === null) 
+    {
+       
+      Bert.alert( '¡No está registrado, por favor inicie sesión!', 'danger', 'growl-top-right', 'fa-remove' );
+    }
+    if(name == "" || text == undefined || areas.length == 0 || services.length == 0){
+        Bert.alert( '¡No ha llenado un campo!', 'warning', 'growl-top-right', 'fa-warning' );
+    }
+    else{
+       Meteor.call('posts.insert', name, text, areas, services, (err, res) => {if (err) Bert.alert( '¡No se pudo agregar al técnico!', 'danger', 'growl-top-right', 'fa-cross' )});
+       Bert.alert( '¡El técnico ha sido agregado con éxito!', 'success', 'growl-top-right', 'fa-check' );
+    }
+
+
+    
 
   }
 
   onVote(post, emoji) {
 
 
-    // if (Meteor.userId() === null) 
-    // {
-    //   window.alert ("You are not registered! Please sign in."); 
-    //   return; 
-    // }
-    
-    Meteor.call('posts.vote', post, emoji, (err, res) => {if (err) alert(err.error)}); 
+    if (Meteor.userId() === null) 
+    {
+       
+      Bert.alert( '¡No está registrado, por favor inicie sesión!', 'danger', 'growl-top-right', 'fa-remove' );
+      return; 
+    }
+   
+    if(post == undefined || emoji == undefined){
+        Bert.alert( '¡No ha seleccionado un campo!', 'warning', 'growl-top-right', 'fa-warning' );
+    }
+    else{
+      Meteor.call('posts.vote', post, emoji, (err, res) => {if (err) alert(err.error)}); 
+      Bert.alert( '¡Gracias por calificar a nuestro técnico!', 'success', 'growl-top-right', 'fa-check' );
+    }
+   
     
   }
 

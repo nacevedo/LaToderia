@@ -6,7 +6,7 @@ export default class PostAdd extends Component {
     super(props);
 
     this.state={
-
+        oneToTen: [1,2,3,4,5,6,7,8,9,10]
     };
   }
   clearContents(element) {
@@ -28,9 +28,27 @@ export default class PostAdd extends Component {
     }
     return res;
   }
+  renderCal()
+  {
+    let res=[];
+    let tec = this.state.oneToTen;
+    for (let i in tec) {
+      
+        res.push(
+        <option key={i} value={tec[i]}> {tec[i]}</option>
+          );
+      
+      
+    }
+    return res;
+  }
 
   handleChangeTecnician(e){
     this.setState({selectValueTecnician:e.target.value});
+  }
+
+  handleChangeCal(e){
+    this.setState({selectValueCal:e.target.value});
   }
 
   render() {
@@ -47,17 +65,20 @@ export default class PostAdd extends Component {
       {this.renderWorks()}
       </select>
       </div>
+      <br/>
         <div>
-        <textarea className="com-text" role="textbox" type="text" placeholder="Califición (de 1 a 10) " aria-label="Type a description of the favor you need help with" ref="text"/>
-        </div>
+      <select className="custom-select form-control" placeholder="Seleccione una califición" onChange={this.handleChangeCal.bind(this)} >
+      <option value="">Seleccione una califición</option>
+      {this.renderCal()}
+      </select>
+      </div>
         <button className="button"
 
           onClick={
             () => 
             {
               console.log(this.state.selectValueTecnician);
-              this.props.onVote(this.state.selectValueTecnician, this.refs.text.value);
-              this.clearContents(this);
+              this.props.onVote(this.state.selectValueTecnician, this.state.selectValueCal);
             }
           }
         >Enviar Califición
