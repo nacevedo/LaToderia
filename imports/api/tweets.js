@@ -44,8 +44,7 @@ Meteor.methods({
                     author: data["user"]["name"],
                     avatar: data["user"]["profile_image_url"],
                     body: data["text"],
-                    screenname: data["user"]["screen_name"],
-                    _id: data["id"]
+                    screenname: data["user"]["screen_name"]
                 };
 
                 new SimpleSchema({
